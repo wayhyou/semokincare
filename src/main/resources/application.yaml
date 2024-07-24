@@ -1,0 +1,32 @@
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/semokincare_test
+      username: enigma
+      password:
+
+    mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+      open-in-view: false
+
+
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "health, beans, metrics"
+#      base-path: "/management-dashboard" # untuk mengganti path /actuator menjadi /management-dashboard
+#  #        include: "*" -> untuk menampilkan semua endpoint pada actuator
+#  #        exclude: "caches" -> untuk mengecualikan endpoint pada actuator
+#  endpoint:
+#    health:
+#      show-details: always
+#
+#dummyService:
+#  port: 8081
+#  address: 127.0.0.1
